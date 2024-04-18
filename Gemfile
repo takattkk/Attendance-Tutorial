@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.2.1"
 gem "rails", "~> 7.1.0"
+gem 'bootstrap-sass'
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
 gem "puma", ">= 5.0"
@@ -10,7 +11,6 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
-
 gem "bootsnap", require: false
 
 group :development, :test do
