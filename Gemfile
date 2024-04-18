@@ -12,7 +12,6 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
 gem "bootsnap", require: false
-gem 'turbo-rails'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
@@ -26,5 +25,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
