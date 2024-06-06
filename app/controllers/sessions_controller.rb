@@ -13,4 +13,10 @@ class SessionsController < ApplicationController
       render 'new', status: :unprocessable_entity
     end
   end
+  
+  def destroy
+    log_out
+    flash[:success] = 'ログアウトしました。'
+    redirect_to root_url
+  end
 end
