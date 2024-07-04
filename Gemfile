@@ -14,8 +14,9 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
-gem 'will_paginate', '~> 3.3' 
-gem 'bootstrap-will_paginate', '1.0.0' 
+gem 'will_paginate', '~> 4.0'
+gem 'will_paginate-bootstrap-style'
+gem 'rails-i18n'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]

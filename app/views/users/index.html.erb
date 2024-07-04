@@ -19,5 +19,5 @@
         </td>
       </tr>
     <% end %>
-  <%= will_paginate %>
+  <%= will_paginate @users, previous_label: '前ページ', next_label: '次ページ' %>
 </div>

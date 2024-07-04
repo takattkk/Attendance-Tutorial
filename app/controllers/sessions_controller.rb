@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
     # ログイン中の場合のみログアウト処理を実行します。
     log_out if logged_in?
     flash[:success] = 'ログアウトしました。'
-    redirect_to root_url
+    redirect_to root_url, status: :see_other
   end
 end
