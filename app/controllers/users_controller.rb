@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @first_day = Date.current.beginning_of_month
+    @last_day = @first_day.end_of_month
   end
 
   def new
@@ -54,16 +56,16 @@ class UsersController < ApplicationController
   end
 
   def update_basic_info
-    if @user.update(basic_info_params)
-      flash[:success] = "#{@user.name}の基本情報を更新しました。"
-    else
-      flash[:danger] = "#{@user.name}の更新は失敗しました。<br>" + @user.errors.full_messages.join("<br>")
-    end
-  
-    respond_to do |format|
-      format.html { redirect_to users_url }
-      format.turbo_stream
-    end
+      if @user.update(basic_info_params)
+        flash[:success] = "#{@user.name}の基本情報を更新しました。"
+      else
+        flash[:danger] = "#{@user.name}の更新は失敗しました。<br>" + @user.errors.full_messages.join("<br>")
+      end
+      
+      respond_to do |format|
+        format.html { redirect_to users_url }
+        format.turbo_stream
+      end
   end
   
   private
@@ -75,6 +77,7 @@ class UsersController < ApplicationController
     def basic_info_params
       params.require(:user).permit(:department, :basic_time, :work_time)
     end
+
 
     # beforeフィルター
 
