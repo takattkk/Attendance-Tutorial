@@ -31,8 +31,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_19_123359) do
     t.string "remember_digest"
     t.boolean "admin", default: false
     t.string "department"
-    t.datetime "basic_time", precision: nil, default: "2024-07-17 23:00:00"
-    t.datetime "work_time", precision: nil, default: "2024-07-17 22:30:00"
+    t.datetime "basic_time", precision: nil, default: "2024-08-21 23:00:00"
+    t.datetime "work_time", precision: nil, default: "2024-08-21 22:30:00"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
