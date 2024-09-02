@@ -27,6 +27,12 @@ group :development do
 end
 
 group :test do
-  gem "capybara"
-  gem "selenium-webdriver"
+ gem 'capybara'
+ gem 'selenium-webdriver'
+ gem 'webdrivers'  #今回追加したGem
+ gem 'rails-flog', require: 'flog' #今回追加したGem
+ gem 'rspec-rails' #今回追加したGem
+ gem "factory_bot_rails" #今回追加したGem
+ gem 'database_cleaner' #今回追加したGem
+ gem 'rails-controller-testing' #今回追加したGem
 end
